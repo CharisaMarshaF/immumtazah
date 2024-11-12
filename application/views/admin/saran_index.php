@@ -1,3 +1,4 @@
+<?= $this->uri->segment(8); ?>
 <div class="data-table-list">
 	<div class="basic-tb-hd">
 		<h2>Saran Pengunjung</h2>

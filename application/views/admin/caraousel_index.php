@@ -1,6 +1,9 @@
+
 <div id="ilang">
     <?= $this->session->flashdata('alert') ?>
 </div>
+<?= $this->uri->segment(2); ?>
+
 <div class="form-element-list mg-t-30">
     <div class="cmp-tb-hd">
         <h2>Caraousel</h2>
@@ -14,7 +17,7 @@
                         <i class="notika-icon notika-form"></i>
                     </div>
                     <div class="nk-int-st">
-                        <input name="judul" type="text" class="form-control" placeholder="Judul">
+                        <input name="judul" type="text" class="form-control" >
                         <label class="nk-label">Judul</label>
                     </div>
                 </div>
@@ -25,7 +28,7 @@
                         <i class="notika-icon notika-form"></i>
                     </div>
                     <div class="nk-int-st">
-                        <input name="deskripsi" type="text" class="form-control" placeholder="Deskripsi">
+                        <input name="deskripsi" type="text" class="form-control" >
                         <label class="nk-label">Deskripsi</label>
                     </div>
                 </div>
@@ -36,7 +39,7 @@
                         <i class="notika-icon notika-pict"></i>
                     </div>
                     <div class="nk-int-st">
-                        <label for="foto" class="form-label">Pilih Foto dengan ukuran (1 : 3)</label>
+                        <label for="foto" class="form-label">Pilih Foto dengan ukuran (16 : 9)</label>
                         <input type="file" class="form-control" id="foto" name="foto" required accept="image/png, image/gif, image/jpeg">
                     </div>
                 </div>

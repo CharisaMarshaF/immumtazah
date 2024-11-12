@@ -2,6 +2,8 @@
 <div id="ilang">
 	<?= $this->session->flashdata('alert') ?>
 </div>
+<?= $this->uri->segment(4); ?>
+
 <div class="modal fade" id="myModaltwotambah" tabindex="-1" role="dialog" aria-labelledby="tambahUserModalLabel"
 	aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered" role="document">
@@ -32,7 +34,7 @@
 						</select>
 					</div>
 					<div class="mb-3 input-group input-group-outline mb-3">
-						<label for="foto" class="form-label">Foto</label>
+						<label for="foto" class="form-label">Pilih Foto dengan ukuran (7 : 5)</label>
 						<input type="file" class="form-control" id="foto" name="foto" required
 							accept="image/png, image/gif, image/jpeg">
 					</div>

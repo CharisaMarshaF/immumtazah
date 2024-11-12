@@ -14,7 +14,7 @@
                         <i class="notika-icon notika-form"></i>
                     </div>
                     <div class="nk-int-st">
-                        <input name="judul" type="text" class="form-control" placeholder="Judul">
+                        <input name="judul" type="text" class="form-control" >
                         <label class="nk-label">Judul</label>
                     </div>
                 </div>

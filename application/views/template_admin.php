@@ -70,10 +70,10 @@
 </head>
 
 <body>
-	<!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-	<!-- Start Header Top Area -->
+<?php 
+$menu = $this->uri->segment(1);
+?>
+
 	<div class="header-top-area">
 		<div class="container">
 			<div class="row">
@@ -142,19 +142,23 @@
 					<div class="mobile-menu">
 						<nav id="dropdown">
 							<ul class="mobile-menu-nav">
-								<li><a href="<?= site_url('admin/home') ?>"><i class="notika-icon notika-menus"></i>
+								<li class="<?php if($menu=='home'){echo 'active';} ?>"><a
+										href=<?= site_url('admin/home') ?>><i class="notika-icon notika-menus"></i>
 										Team</a></li>
-								<li><a href="<?= site_url('admin/caraousel') ?>"><i class="notika-icon notika-mail"></i>
+								<li class="<?php if($menu=='caraousel'){echo 'active';} ?>"><a
+										href=<?= site_url('admin/caraousel') ?>><i
+											class="notika-icon notika-mail"></i>
 										Caraousel</a></li>
-								<li><a href="<?= site_url('admin/kategori') ?>"><i class="notika-icon notika-edit"></i>
+								<li class="<?php if($menu=='kategori'){echo 'active';} ?>"><a
+										href=<?= site_url('admin/kategori') ?>><i class="notika-icon notika-edit"></i>
 										Kategori</a></li>
-								<li><a href="<?= site_url('admin/konten') ?>"><i
+								<li><a href=<?= site_url('admin/konten') ?>><i
 											class="notika-icon notika-bar-chart"></i> Konten</a></li>
-								<li><a href="<?= site_url('admin/galeri') ?>"><i class="notika-icon notika-windows"></i>
+								<li><a href=<?= site_url('admin/galeri') ?>><i class="notika-icon notika-windows"></i>
 										Galeri</a></li>
-								<li><a href="<?= site_url('admin/saran') ?>"><i class="notika-icon notika-form"></i>
+								<li><a href=<?= site_url('admin/saran') ?>><i class="notika-icon notika-form"></i>
 										Saran</a></li>
-								<li><a href="<?= site_url('admin/user') ?>"><i class="notika-icon notika-support"></i>
+								<li><a href=<?= site_url('admin/user') ?>><i class="notika-icon notika-support"></i>
 										User</a></li>
 								<li><a href="<?= site_url('admin/konfigurasi') ?>"><i
 											class="notika-icon notika-alarm"></i> Konfigurasi</a></li>
@@ -170,34 +174,48 @@
 	<!-- Mobile Menu end -->
 
 	<!-- Main Menu area start-->
-	<div class="main-menu-area mg-tb-40">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro" id="mainMenu">
-						<li class="col-1"><a href="<?= site_url('admin/home') ?>"><i
-									class="notika-icon notika-menus"></i> Team</a></li>
-						<li class="col-1"><a href="<?= site_url('admin/caraousel') ?>"><i
-									class="notika-icon notika-mail"></i>Caraousel</a></li>
-						<li class="col-1"><a href="<?= site_url('admin/kategori') ?>"><i
-									class="notika-icon notika-edit"></i>Kategori</a></li>
-						<li class="col-1"><a href="<?= site_url('admin/konten') ?>"><i
-									class="notika-icon notika-bar-chart"></i>Konten</a></li>
-						<li class="col-1"><a href="<?= site_url('admin/galeri') ?>"><i
-									class="notika-icon notika-windows"></i> Galeri</a></li>
-						<li class="col-1"><a href="<?= site_url('admin/saran') ?>"><i
-									class="notika-icon notika-form"></i> Saran</a></li>
-						<li class="col-1"><a href="<?= site_url('admin/user') ?>"><i
-									class="notika-icon notika-support"></i> User</a></li>
-						<li class="col-1"><a href="<?= site_url('admin/konfigurasi') ?>"><i
-									class="notika-icon notika-alarm"></i> Konfigurasi</a></li>
-						<li class="col-1"><a href="<?= site_url('admin/testimonial') ?>"><i
-									class="notika-icon notika-chat"></i> Testi</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+	
+	<!-- Main Menu area start-->
+<?php 
+$menu = $this->uri->uri_string(); 
+?>
+<div class="main-menu-area mg-tb-40"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro" id="mainMenu">
+                    <li class="col-1 <?php if($menu == 'admin/home'){ echo 'active'; } ?>">
+                        <a href="<?= base_url('admin/home') ?>"><i class="notika-icon notika-menus"></i> Team</a>
+                    </li>
+                    <li class="col-1 <?php if($menu == 'admin/caraousel'){ echo 'active'; } ?>">
+                        <a href="<?= base_url('admin/caraousel') ?>"><i class="notika-icon notika-mail"></i> Caraousel</a>
+                    </li>
+                    <li class="col-1 <?php if($menu == 'admin/kategori'){ echo 'active'; } ?>">
+                        <a href="<?= base_url('admin/kategori') ?>"><i class="notika-icon notika-edit"></i> Kategori</a>
+                    </li>
+                    <li class="col-1 <?php if($menu == 'admin/konten'){ echo 'active'; } ?>">
+                        <a href="<?= base_url('admin/konten') ?>"><i class="notika-icon notika-bar-chart"></i> Konten</a>
+                    </li>
+                    <li class="col-1 <?php if($menu == 'admin/galeri'){ echo 'active'; } ?>">
+                        <a href="<?= base_url('admin/galeri') ?>"><i class="notika-icon notika-windows"></i> Galeri</a>
+                    </li>
+                    <li class="col-1 <?php if($menu == 'admin/user'){ echo 'active'; } ?>">
+                        <a href="<?= base_url('admin/user') ?>"><i class="notika-icon notika-support"></i> User</a>
+                    </li>
+                    <li class="col-1 <?php if($menu == 'admin/konfigurasi'){ echo 'active'; } ?>">
+                        <a href="<?= base_url('admin/konfigurasi') ?>"><i class="notika-icon notika-alarm"></i> Konfigurasi</a>
+                    </li>
+                    <li class="col-1 <?php if($menu == 'admin/testimonial'){ echo 'active'; } ?>">
+                        <a href="<?= base_url('admin/testimonial') ?>"><i class="notika-icon notika-chat"></i> Testi</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+	<!-- Main Menu area End-->
+
 	<!-- Main Menu area End-->
 
 	<!-- Breadcomb area Start-->

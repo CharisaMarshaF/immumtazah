@@ -38,72 +38,8 @@
 
 
 	<!-- Topbar Start -->
-	<div class="container-fluid bg-dark px-5 d-none d-lg-block">
-		<div class="row gx-0 align-items-center" style="height: 45px;">
-			<div class="col-lg-8 text-center text-lg-start mb-lg-0">
-				<div class="d-flex flex-wrap">
-					<a href="<?= $konfig->alamat; ?>" class="text-light me-4"><i
-							class="fas fa-map-marker-alt text-success me-2"></i>Lokasi Immumtazah</a>
-					
-				</div>
-			</div>
-			<div class="col-lg-4 text-center text-lg-end">
-				<div class="d-flex align-items-center justify-content-end">
-					<a href="<?= $konfig->facebook ?? '#' ?>" target="_blank"
-						class="btn btn-light btn-square border rounded-circle nav-fill me-3">
-						<i class="fab fa-facebook-f"></i>
-					</a>
-					<a href="<?= $konfig->instagram ?? '#' ?>" target="_blank"
-						class="btn btn-light btn-square border rounded-circle nav-fill me-3">
-						<i class="fab fa-instagram"></i>
-					</a>
-					<a href="<?= isset($konfig->telepon) ? 'https://wa.me/' . $konfig->telepon : '#' ?>" target="_blank"
-						class="btn btn-light btn-square border rounded-circle nav-fill me-0">
-						<i class="fab fa-whatsapp"></i>
-					</a>
-				</div>
-			</div>
+	<?php require_once('_navbar.php')?>
 
-		</div>
-	</div>
-	<!-- Topbar End -->
-
-
-	<!-- Navbar & Hero Start -->
-	<div class="container-fluid position-relative p-0">
-		<nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
-			<a href="<?= base_url() ?>" class="navbar-brand p-0">
-				<h1 class="text-success m-0"><img src="<?= base_url('assets/upload/immumtazah/logo.png') ?>" alt="Logo">
-				 <?= $konfig->judul_website; ?></h1>
-			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-				<span class="fa fa-bars"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<div class="navbar-nav ms-auto py-0">
-					<a href="<?= base_url() ?>" class="nav-item nav-link">Home</a>
-					<a href="<?= base_url('home/about/') ?>" class="nav-item nav-link">Tentang</a>
-					<a href="<?= base_url('home/galeri/') ?>" class="nav-item nav-link">Galeri</a>
-					<div class="nav-item dropdown">
-						<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pelayanan</a>
-						<div class="dropdown-menu m-0">
-							<a href="<?= base_url('home/pelayanan/') ?>" class="dropdown-item">Semua</a>
-
-							<!-- Loop PHP untuk menampilkan kategori sebagai item dropdown -->
-							<?php foreach ($kategori as $kate) { ?>
-							<a href="<?= base_url('home/kategori/' . $kate['id_kategori']) ?>" class="dropdown-item">
-								<?= $kate['nama_kategori'] ?>
-							</a>
-							<?php } ?>
-						</div>
-					</div>
-					<a href="<?= base_url('home/contact/') ?>" class="nav-item nav-link">Kontak</a>
-				</div>
-				<a href="<?= base_url('home/reservasi/') ?>"
-					class="btn btn-success rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Reservasi</a>
-			</div>
-		</nav>
-	</div>
 	<!-- Navbar End -->
 
 
@@ -153,67 +89,8 @@
 	<!-- Blog End -->
 
 
-	<!-- Footer Start -->
-	<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-		<div class="container py-5">
-			<div class="row g-5">
-				<div class="col-md-6 col-lg-6 col-xl-3">
-					<div class="footer-item d-flex flex-column">
-						<h4 class="text-white mb-4"><i
-								class="fas fa-star-of-life me-3"></i><?= $konfig->judul_website; ?></h4>
-						<p><?= $konfig->profil_website; ?>
-						</p>
-						<div class="d-flex align-items-center">
-							<i class="fas fa-share fa-2x text-white me-2"></i>
-							<a class="btn-square btn btn-success text-white rounded-circle mx-1"
-								href="<?= $konfig->facebook; ?>"><i class="fab fa-facebook-f"></i></a>
-							<a class="btn-square btn btn-success text-white rounded-circle mx-1"
-								href="<?= $konfig->telepon; ?>"><i class="fab fa-whatsapp"></i></a>
-							<a class="btn-square btn btn-success text-white rounded-circle mx-1"
-								href="<?= $konfig->instagram; ?>"><i class="fab fa-instagram"></i></a>
+	<?php require_once('_footer.php')?>
 
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-6 col-xl-3">
-					<div class="footer-item d-flex flex-column">
-						<h4 class="mb-4 text-white">Quick Links</h4>
-						<a href="<?= base_url('home/about/') ?>"><i class="fas fa-angle-right me-2"></i> Tentang</a>
-						<a href="<?= base_url('home/contact/') ?>"><i class="fas fa-angle-right me-2"></i> Kontak</a>
-						<a href="<?= base_url('home/galeri/') ?>"><i class="fas fa-angle-right me-2"></i> Galeri</a>
-						<a href="<?= base_url('home/pelayanan/') ?>"><i
-								class="fas fa-angle-right me-2"></i>Pelayanan</a>
-						<a href="<?= base_url('home/reservasi/') ?>"><i class="fas fa-angle-right me-2"></i>
-							Reservasi</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-6 col-xl-3">
-					<div class="footer-item d-flex flex-column">
-						<h4 class="mb-4 text-white">Pelayanan</h4>
-						<a href="<?= base_url('home/pelayanan/') ?>"><i class="fas fa-angle-right me-2"></i> Semua
-							Pelayanan</a>
-
-						<?php foreach ($kategori as $kate) { ?>
-						<a href="<?= base_url('home/kategori/' . $kate['id_kategori']) ?>"><i
-								class="fas fa-angle-right me-2"></i><?= $kate['nama_kategori'] ?></a>
-
-						<?php } ?>
-
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-6 col-xl-3">
-					<div class="footer-item d-flex flex-column">
-						<h4 class="mb-4 text-white">Info Kontak</h4>
-						<a href="<?= $konfig->alamat; ?>"><i class="fa fa-map-marker-alt me-2"></i>
-							Mendungan, Jungke, Karanganyar</a>
-						<a href="<?= $konfig->instagram; ?>" class="mb-3"><i
-							class="fab fa-instagram me-2"></i>Immumtazah</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Footer End -->
 
 	<!-- Copyright Start -->
 	<div class="container-fluid copyright py-4">

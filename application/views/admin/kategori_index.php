@@ -2,6 +2,7 @@
 <div id="ilang">
     <?= $this->session->flashdata('alert') ?>
 </div>
+<?= $this->uri->segment(3); ?>
 <div class="modal fade" id="myModaltwotambah" tabindex="-1" role="dialog" aria-labelledby="tambahUserModalLabel"
 	aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered" role="document">

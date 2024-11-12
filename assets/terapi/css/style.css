@@ -115,7 +115,7 @@
     transform: translateY(-50%);
     margin-top: 8px;
     margin-left: -100px;
-    border: 1px solid var(--bs-success) !important;
+    border: 1px solid var(--bs-secondary) !important;
 }
 
 .section-title .sub-style::after {
@@ -127,7 +127,7 @@
     transform: translateY(-50%);
     margin-bottom: 5px;
     margin-left: -50px;
-    border: 1px solid var(--bs-success) !important;
+    border: 1px solid var(--bs-secondary) !important;
 }
 
 .sub-title {
@@ -146,7 +146,7 @@
     transform: translateY(-50%);
     margin-top: 8px;
     margin-right: -100px;
-    border: 1px solid var(--bs-success) !important;
+    border: 1px solid var(--bs-secondary) !important;
 }
 
 .sub-title::after {
@@ -158,7 +158,7 @@
     transform: translateY(-50%);
     margin-bottom: 8px;
     margin-right: -50px;
-    border: 1px solid var(--bs-success) !important;
+    border: 1px solid var(--bs-secondary) !important;
 }
 
 
@@ -453,7 +453,7 @@
 
 /*** Service Start ***/
 .service .service-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .2) ;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.20);
 }
 
 .service .service-item .service-img {
@@ -475,14 +475,14 @@
     left: 0;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    background: rgba(21, 185, 217, 0.15); /* Warna lebih soft */
     transition: 0.5s;
     z-index: 5;
-    
 }
 
 .service .service-item:hover .service-img::before {
     height: 100%;
-    background: rgba(21, 185, 217, .3);
+    background: rgba(21, 185, 217, 0.4); /* Warna hover lebih terang */
 }
 
 .service .service-item .service-img:hover img {
@@ -492,7 +492,10 @@
 .service .service-item .service-content {
     position: relative;
     z-index: 2;
-
+    background: #fff; /* Background putih untuk konten */
+    padding: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .service .service-item .service-content::before {
@@ -504,31 +507,32 @@
     left: 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background: rgb(144, 238, 144); /* Hijau dengan sedikit biru */
-
+    background: rgba(144, 238, 144, 0.3); /* Hijau pastel */
     transition: 0.5s;
     z-index: 3;
 }
 
 .service .service-item:hover .service-content::before {
-    background: rgb(144, 238, 144);  /* Hijau dengan sedikit biru */
-
-
+    background: rgba(144, 238, 144, 0.5); /* Hijau pastel lebih cerah saat hover */
     height: 100%;
 }
 
 .service .service-item .service-content .service-content-inner {
     transition: 0.5s;
+    color: #333; /* Warna teks utama */
 }
-
 
 .service .service-item:hover .service-content .service-content-inner {
     position: relative;
-    color: var(--bs-white) !important;
+    color: #333 !important; /* Warna putih bersih untuk kontras tinggi */
     z-index: 9;
 }
+.service .service-item .service-content .service-content-inner h5 {
+    color: var(--bs-secondary); /* Warna hitam terang */
+}
+
 .service .service-item:hover .service-content .service-content-inner h5 {
-    color: var(--bs-secondary);
+    color: #00712D; /* Hijau sangat muda untuk judul saat hover */
 }
 
 /*** Service End ***/
@@ -636,6 +640,28 @@
     box-shadow: inset 600px 0 0 0 var(--bs-light) !important;
     color: var(--bs-success) !important;
 }
+/*** Appointment lala ***/
+.appointmentt {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.appointmentt .appointmentt-form {
+    background: rgba(239, 162, 134, 0.3);
+}
+
+.appointmentt .appointmentt-form .btn.btn-success {
+    box-shadow: inset 0 0 0 0 var(--bs-success);
+}
+
+.appointmentt .appointmentt-form .btn.btn-success:hover {
+    box-shadow: inset 600px 0 0 0 var(--bs-light) !important;
+    color: var(--bs-success) !important;
+}
+/*** Youtube Video start ***/
 /*** Youtube Video start ***/
 .video {
     position: relative;
@@ -801,7 +827,7 @@
 
 /*** testimonial Start ***/
 .testimonial {
-    background: linear-gradient(rgba(173, 216, 190, 0.9), rgba(173, 216, 190, 0.9)), url(../img/carousel-1.jpg);
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../img/carousel-1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -821,7 +847,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 5px solid var(--bs-white);
+    border: 5px solid var(--bs-success);
 }
 
 .testimonial .testimonial-carousel.owl-carousel {
@@ -840,8 +866,8 @@
     align-items: center;
     justify-content: center;
     font-size: 20px;
-    background: var(--bs-light);
-    color: var(--bs-success);
+    background: var(--bs-success);
+    color: var(--bs-white);
     transition: 0.5s;
 }
 
@@ -857,8 +883,8 @@
     align-items: center;
     justify-content: center;
     font-size: 20px;
-    background: var(--bs-light);
-    color: var(--bs-success);
+    background: var(--bs-success);
+    color: var(--bs-white);
     transition: 0.5s;
 }
 
@@ -894,7 +920,7 @@
     height: 20px;
     border-radius: 50%;
     margin-right: 15px;
-    border: 1px solid var(--bs-white);
+    border: 1px solid var(--bs-gray);
     background: transparent;
     transition: 0.5s;
 }
@@ -902,7 +928,7 @@
 .testimonial-carousel .owl-dots .owl-dot.active {
     width: 20px;
     height: 20px;
-    background: var(--bs-secondary) !important;
+    background: var(--bs-success) !important;
 }
 
 .testimonial-carousel .owl-dots .owl-dot span {
@@ -965,7 +991,7 @@
     transform: translateY(-50%);
     margin-top: 8px;
     margin-left: -100px;
-    border: 1px solid var(--bs-white) !important;
+    border: 1px solid var(--bs-secondary) !important;
 }
 
 .testimonial .section-title .sub-style::after {
@@ -977,7 +1003,7 @@
     transform: translateY(-50%);
     margin-bottom: 5px;
     margin-left: -50px;
-    border: 1px solid var(--bs-white) !important;
+    border: 1px solid var(--bs-secondary) !important;
 }
 
 .testimonial .section-title .sub-title {
@@ -996,7 +1022,7 @@
     transform: translateY(-50%);
     margin-top: 8px;
     margin-right: -100px;
-    border: 1px solid var(--bs-white) !important;
+    border: 1px solid var(--bs-secondary) !important;
 }
 
 .testimonial .section-title .sub-title::after {
@@ -1008,7 +1034,7 @@
     transform: translateY(-50%);
     margin-bottom: 8px;
     margin-right: -50px;
-    border: 1px solid var(--bs-white) !important;
+    border: 1px solid var(--bs-secondary) !important;
 }
 /*** Testimonial End ***/
 

@@ -19,8 +19,6 @@ class Home extends CI_Controller {
         $testimonial = $this->db->get()->result_array();
         $this->db->from('caraousel');
         $caraousel = $this->db->get()->result_array();
-        $this->db->from('saran');
-        $saran = $this->db->get()->result_array();
         $recentpost = $this->Konten_model->recentpost();
         $recentfooter = $this->Konten_model->recentfooter();   
         $search = $this->input->get('search');
@@ -45,7 +43,6 @@ class Home extends CI_Controller {
             'konten'    => $konten,
             'recentpost' => $recentpost,
             'recentfooter' => $recentfooter,
-            'saran' => $saran,
 
         );
         
@@ -64,8 +61,6 @@ class Home extends CI_Controller {
         $testimonial = $this->db->get()->result_array();
         $this->db->from('caraousel');
         $caraousel = $this->db->get()->result_array();
-        $this->db->from('saran');
-        $saran = $this->db->get()->result_array();
         $this->db->from('konten a');
         $konten = $this->db->get()->result_array();
         
@@ -76,7 +71,6 @@ class Home extends CI_Controller {
             'galeri' => $galeri,
 			'testimonial' => $testimonial,
             'caraousel' => $caraousel,            
-            'saran' => $saran,
             'team' => $team,
             'konten'    => $konten,
 
@@ -126,8 +120,6 @@ class Home extends CI_Controller {
         $testimonial = $this->db->get()->result_array();
         $this->db->from('caraousel');
         $caraousel = $this->db->get()->result_array();
-        $this->db->from('saran');
-        $saran = $this->db->get()->result_array();
         $recentpost = $this->Konten_model->recentpost();
         $recentfooter = $this->Konten_model->recentfooter();   
         $search = $this->input->get('search');
@@ -151,7 +143,6 @@ class Home extends CI_Controller {
             'konten'    => $konten,
             'recentpost' => $recentpost,
             'recentfooter' => $recentfooter,
-            'saran' => $saran,
 
         );
         
@@ -205,8 +196,6 @@ class Home extends CI_Controller {
         $testimonial = $this->db->get()->result_array();
         $this->db->from('caraousel');
         $caraousel = $this->db->get()->result_array();
-        $this->db->from('saran');
-        $saran = $this->db->get()->result_array();
         $this->db->from('konten a');
         $konten = $this->db->get()->result_array();
         
@@ -217,7 +206,6 @@ class Home extends CI_Controller {
             'galeri' => $galeri,
 			'testimonial' => $testimonial,
             'caraousel' => $caraousel,            
-            'saran' => $saran,
             'team' => $team,
             'konten'    => $konten,
 
@@ -238,8 +226,6 @@ class Home extends CI_Controller {
         $testimonial = $this->db->get()->result_array();
         $this->db->from('caraousel');
         $caraousel = $this->db->get()->result_array();
-        $this->db->from('saran');
-        $saran = $this->db->get()->result_array();
         $this->db->from('konten a');
         $konten = $this->db->get()->result_array();
         
@@ -250,7 +236,6 @@ class Home extends CI_Controller {
             'galeri' => $galeri,
 			'testimonial' => $testimonial,
             'caraousel' => $caraousel,            
-            'saran' => $saran,
             'team' => $team,
             'konten'    => $konten,
 
@@ -258,20 +243,5 @@ class Home extends CI_Controller {
         
 		$this->load->view('reservasi',$data);
     }
-    public function saran(){
-        $this->db->from('saran');
-        $this->db->where('nama',$this->input->post('nama'));
-        $data = array(
-            'nama'          => $this->input->post('nama'),
-            'isi_saran'     => $this->input->post('isi_saran'),
-            'tanggal'        => date('Y-m-d'),
-            'email'     => $this->input->post('email'),
-
-        );
-        $this->db->insert('saran',$data);       
-        redirect('home/contact');
-    }
-    
-    
     
 }

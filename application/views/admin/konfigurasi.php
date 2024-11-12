@@ -1,3 +1,5 @@
+<?= $this->uri->segment(7); ?>
+
 <div class="form-example-wrap">
 	<div class="cmp-tb-hd">
 		<h2>Konfigurasi Web</h2>

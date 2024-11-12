@@ -37,73 +37,8 @@
 
 
 	<!-- Topbar Start -->
-	<div class="container-fluid bg-dark px-5 d-none d-lg-block">
-		<div class="row gx-0 align-items-center" style="height: 45px;">
-			<div class="col-lg-8 text-center text-lg-start mb-lg-0">
-				<div class="d-flex flex-wrap">
-					<a href="<?= $konfig->alamat; ?>" class="text-light me-4"><i
-							class="fas fa-map-marker-alt text-success me-2"></i>Lokasi Immumtazah</a>
-					
-				
-				</div>
-			</div>
-			<div class="col-lg-4 text-center text-lg-end">
-				<div class="d-flex align-items-center justify-content-end">
-					<a href="<?= $konfig->facebook ?? '#' ?>" target="_blank"
-						class="btn btn-light btn-square border rounded-circle nav-fill me-3">
-						<i class="fab fa-facebook-f"></i>
-					</a>
-					<a href="<?= $konfig->instagram ?? '#' ?>" target="_blank"
-						class="btn btn-light btn-square border rounded-circle nav-fill me-3">
-						<i class="fab fa-instagram"></i>
-					</a>
-					<a href="<?= isset($konfig->telepon) ? 'https://wa.me/' . $konfig->telepon : '#' ?>" target="_blank"
-						class="btn btn-light btn-square border rounded-circle nav-fill me-0">
-						<i class="fab fa-whatsapp"></i>
-					</a>
-				</div>
-			</div>
+	<?php require_once('_navbar.php')?>
 
-		</div>
-	</div>
-	<!-- Topbar End -->
-
-
-	<!-- Navbar & Hero Start -->
-	<div class="container-fluid position-relative p-0">
-		<nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
-			<a href="<?= base_url() ?>" class="navbar-brand p-0">
-				<h1 class="text-success m-0"><img src="<?= base_url('assets/upload/immumtazah/logo.png') ?>" alt="Logo">
-				 <?= $konfig->judul_website; ?></h1>
-			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-				<span class="fa fa-bars"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<div class="navbar-nav ms-auto py-0">
-					<a href="<?= base_url() ?>" class="nav-item nav-link">Home</a>
-					<a href="<?= base_url('home/about/') ?>" class="nav-item nav-link">Tentang</a>
-
-					<a href="<?= base_url('home/galeri/') ?>" class="nav-item nav-link">Galeri</a>
-					<div class="nav-item dropdown">
-						<a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pelayanan</a>
-						<div class="dropdown-menu m-0">
-							<a href="<?= base_url('home/pelayanan/') ?>" class="dropdown-item">Semua</a>
-
-							<?php foreach ($kategori as $kate) { ?>
-							<a href="<?= base_url('home/kategori/' . $kate['id_kategori']) ?>" class="dropdown-item">
-								<?= $kate['nama_kategori'] ?>
-							</a>
-							<?php } ?>
-						</div>
-					</div>
-					<a href="<?= base_url('home/contact/') ?>" class="nav-item nav-link">Kontak</a>
-				</div>
-				<a href="<?= base_url('home/reservasi/') ?>"
-					class="btn btn-success rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Reservasi</a>
-			</div>
-		</nav>
-	</div>
 	<!-- Navbar End -->
 
 
@@ -121,6 +56,7 @@
 	<!-- Header End -->
 
 
+	<!-- About Start -->
 	<!-- About Start -->
 	<div class="container-fluid about bg-light py-5">
 		<div class="container py-5">
@@ -141,19 +77,13 @@
 					<div class="section-title text-start mb-5">
 						<h4 class="sub-title pe-3 mb-0">Tentang Kami</h4>
 						<h1 class="display-3 mb-4">IMMUMTAZAH TERAPHY CENTER</h1>
-						<p class="mb-4">Bismillahirrahmanirrahim,Telah Hadir Rumah Sehat IMMUMTAZAH. No. SIP.
-							443/234/RS/PAT/01/IV/2024 Melayani Terapi Akupunktur Untuk Kesehatan dan
-							Kecantikan,Akupresur (Pijat di Titik Syaraf) , BEKAM, Totok Wajah, Facial,Body Spa
-							,Perawatan Kecantikan,Perawatan seluruh tubuh menjelang Pernikahan(lulur, Facial
-							,V-herbalTreatment) ,Baby Spa dan Jamu tersaintifikasi(melalui Pemesanan)
-							"Bismillah,Mari Berusaha Sehat Bersama-Sama"</p>
+						<p class="mb-4">Rumah Sehat IMMUMTAZAH melayani Akupunktur Kesehatan & Kecantikan, Akupresur (Pijat Titik Syaraf), Bekam, Totok Wajah, Facial, Body Spa, Perawatan Pranikah (lulur, facial, V-herbal treatment), Baby Spa, serta Jamu bersertifikasi (pemesanan).</p>
 						<div class="mb-4">
-							<p class="text-secondary"><i class="fa fa-check text-success me-2"></i> Perawatan yang
-								Menyegarkan Tubuh Anda.</p>
-							<p class="text-secondary"><i class="fa fa-check text-success me-2"></i> Pelayanan Ramah dan
-								Profesional. </p>
-							<p class="text-secondary"><i class="fa fa-check text-success me-2"></i> Meningkatkan
-								Kesehatan dan Kecantikan Alami</p>
+							<p class="text-secondary"><i class="fa fa-check text-success me-2"></i> Sehat dan Segar, Bersama Kami
+							</p>
+							<p class="text-secondary"><i class="fa fa-check text-success me-2"></i> Pelayanan Ramah, Profesional
+							</p>
+							<p class="text-secondary"><i class="fa fa-check text-success me-2"></i> Sudah bersertifikasi</p>
 						</div>
 					</div>
 				</div>
@@ -161,9 +91,7 @@
 		</div>
 	</div>
 	<!-- About End -->
-
-
-	<!-- Team Start -->
+	 <!-- Team Start -->
 	<div class="container-fluid team py-5">
 		<div class="container py-5">
 			<div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -193,88 +121,38 @@
 		</div>
 	</div>
 	<!-- Team End -->
-
-
-	<!-- Feature Start -->
-	<div class="container-fluid feature py-5">
+	<!-- Pemilik Start -->
+	<div class="container-fluid about bg-light py-5">
 		<div class="container py-5">
-			<div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
-				<div class="sub-style">
-					<h4 class="sub-title px-3 mb-0">Keunggulan Kami</h4>
-				</div>
-				<h1 class="display-3 mb-4">Fasilitas Lengkap, Layanan Terpercaya</h1>
-				<p class="mb-0">"Dengan fasilitas terpadu yang lengkap, pelayanan yang berkualitas prima, dan tenaga
-					ahli yang berpengalaman, kami memberikan pengalaman perawatan yang tak tertandingi. Kami berkomitmen
-					untuk menjadi mitra kesehatan yang dapat diandalkan bagi setiap pasien, memberikan solusi yang
-					efektif dan menyeluruh untuk setiap kebutuhan kesehatan mereka."</p>
-			</div>
-			<div class="row g-4 justify-content-center">
-				<div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-					<div class="row-cols-1 feature-item p-4">
-						<div class="col-12">
-							<div class="feature-icon mb-4">
-								<div class="p-3 d-inline-flex bg-white rounded">
-									<i class="fas fa-diagnoses fa-4x text-success"></i>
-								</div>
-							</div>
-							<div class="feature-content d-flex flex-column">
-								<h5 class="mb-4">Tenaga Ahli</h5>
-								<p class="mb-0">Dilakukan oleh Tenaga Kesehatan Berpendidikan Minimal D3</p>
-							</div>
+			<div class="row g-5 align-items-center">
+				<div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
+					<div class="about-img pb-5 ps-5">
+						<img src="<?= base_url('assets/upload/immumtazah/sampul.jpg') ?>"
+							class="img-fluid rounded w-100" style="object-fit: cover;" alt="Image">
+						<div class="about-img-inner">
+							<img src="<?= base_url('assets/upload/immumtazah/pemilik.jpg') ?>"
+								class="img-fluid rounded-circle "
+								style="width: 250px; height: 250px; object-fit: cover;" alt="Image">
 						</div>
+						<div class="about-experience">PEMILIK IMMUMTAZAH</div>
 					</div>
 				</div>
-				<div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-					<div class="row-cols-1 feature-item p-4">
-						<div class="col-12">
-							<div class="feature-icon mb-4">
-								<div class="p-3 d-inline-flex bg-white rounded">
-									<i class="fas fa-briefcase-medical fa-4x text-success"></i>
-								</div>
-							</div>
-							<div class="feature-content d-flex flex-column">
-								<h5 class="mb-4">Fasilitas Lengkap</h5>
-								<p class="mb-0">Menyediakan Fasilitas Kesehatan yang Lengkap dan Sesuai Kebutuhan</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-					<div class="row-cols-1 feature-item p-4">
-						<div class="col-12">
-							<div class="feature-icon mb-4">
-								<div class="p-3 d-inline-flex bg-white rounded">
-									<i class="fas fa-hospital-user fa-4x text-success"></i>
-								</div>
-							</div>
-							<div class="feature-content d-flex flex-column">
-								<h5 class="mb-4">Pelayanan Prima
-								</h5>
-								<p class="mb-0">Berkomitmen Memberikan Pelayanan Prima Bagi Pasien</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-					<div class="row-cols-1 feature-item p-4">
-						<div class="col-12">
-							<div class="feature-icon mb-4">
-								<div class="p-3 d-inline-flex bg-white rounded">
-									<i class="fas fa-user-md fa-4x text-success"></i>
-								</div>
-							</div>
-							<div class="feature-content d-flex flex-column">
-								<h5 class="mb-4">Terapis Bersertifikat</h5>
-								<p class="mb-0">Ditangani oleh Terapis Berlisensi yang Memiliki Sertifikasi</p>
-							</div>
-						</div>
-					</div>
-				</div>
+				<div class="col-lg-7 wow fadeInRight" data-wow-delay="0.4s">
+					<div class="section-title text-start mb-5">
+						<h4 class="sub-title pe-3 mb-0">Tentang Saya</h4>
+						<h1 class="display-3 mb-4">Imrok Atus Sholihah,S.Tr.Akp., SKM., MKM</h1>
+						<p class="mb-4">Seorang Dosen aktif di Poltekkes Kemenkes Surakarta dari tahun 2020-saat ini,
+							seorang ibu IKKT Akademi TNI dan seorang ibu dari 1 anak. Saat ini aktif melakukan
+							penelitian dan riset bidang ilmu kesehatan dan akupunktur. Dan rutin melaksanakan pengabdian
+							masyarakat yang terprogram dari pemerintah maupun pribadi, serta berpengalaman menangani
+							banyak pasien dengan berbagai keluhan sejak tahun 2017</p>
 
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<!-- Feature End -->
+	<!-- Blog End -->
 
 
 	<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
