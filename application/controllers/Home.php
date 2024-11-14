@@ -148,106 +148,52 @@ class Home extends CI_Controller {
         
 		$this->load->view('pelayanan',$data);
     }
-    public function kategori($id){
-        $this->db->from('konfigurasi');
-        $konfig = $this->db->get()->row();
-        $this->db->from('galeri');
-        $galeri = $this->db->get()->result_array();
-        $this->db->from('testimonial');
-        $testimonial = $this->db->get()->result_array();
-        $this->db->from('caraousel');
-        $caraousel = $this->db->get()->result_array();
-        $this->db->from('team');
-        $team = $this->db->get()->result_array();
-        $this->db->from('kategori');
-        $kategori = $this->db->get()->result_array();
-        $this->db->from('konten a');
-        $this->db->join('kategori b', 'a.id_kategori=b.id_kategori', 'left');
-        $this->db->join('user c', 'a.username=c.username', 'left');
-        $this->db->where('a.id_kategori', $id);
-        $konten = $this->db->get()->result_array();
-        $this->db->from('kategori');
-        $this->db->where('id_kategori', $id);
-        $kategori_data = $this->db->get()->row();
-        if ($kategori_data) {
-            $nama_kategori = $kategori_data->nama_kategori;
-        } else {
-            $nama_kategori = 'Kategori Tidak Ditemukan'; 
-        }
-        $data = array(
-            'judul'   => $nama_kategori . " | CharisaAlele",
-            'nama_kategori' => $nama_kategori,
-            'konfig'  => $konfig,
-            'kategori' => $kategori,
-            'konten'    => $konten,
-            'caraousel' => $caraousel,
-            'galeri' => $galeri,
-            'testimonial' => $testimonial,
-            'team' => $team,
-        );
-    
-        $this->load->view('kategori', $data);
+    public function kategori($id = null){    
+    if ($id === null) {
+        redirect('pelayanan');  
     }
-    
-    public function contact(){
-        $this->db->from('konfigurasi');
-        $konfig = $this->db->get()->row();
-        $this->db->from('kategori');
-        $kategori = $this->db->get()->result_array();
-        $this->db->from('galeri');
-        $galeri = $this->db->get()->result_array();
-        $this->db->from('team');
-        $team = $this->db->get()->result_array();
-		$this->db->from('testimonial');
-        $testimonial = $this->db->get()->result_array();
-        $this->db->from('caraousel');
-        $caraousel = $this->db->get()->result_array();
-        $this->db->from('konten a');
-        $konten = $this->db->get()->result_array();
-        
-        $data = array(
-            'judul'   => "Beranda | CharisaAlele",
-            'konfig'  => $konfig,
-            'kategori' => $kategori,
-            'galeri' => $galeri,
-			'testimonial' => $testimonial,
-            'caraousel' => $caraousel,            
-            'team' => $team,
-            'konten'    => $konten,
 
-        );
-        
-		$this->load->view('contact',$data);
+    $this->db->from('konfigurasi');
+    $konfig = $this->db->get()->row();
+    $this->db->from('galeri');
+    $galeri = $this->db->get()->result_array();
+    $this->db->from('testimonial');
+    $testimonial = $this->db->get()->result_array();
+    $this->db->from('caraousel');
+    $caraousel = $this->db->get()->result_array();
+    $this->db->from('team');
+    $team = $this->db->get()->result_array();
+    $this->db->from('kategori');
+    $kategori = $this->db->get()->result_array();
+    $this->db->from('konten a');
+    $this->db->join('kategori b', 'a.id_kategori=b.id_kategori', 'left');
+    $this->db->join('user c', 'a.username=c.username', 'left');
+    $this->db->where('a.id_kategori', $id);
+    $konten = $this->db->get()->result_array();
+    $this->db->from('kategori');
+    $this->db->where('id_kategori', $id);
+    $kategori_data = $this->db->get()->row();
+    
+    if (!$kategori_data) {
+        redirect('home/kategori'); 
     }
-    public function reservasi(){
-        $this->db->from('konfigurasi');
-        $konfig = $this->db->get()->row();
-        $this->db->from('kategori');
-        $kategori = $this->db->get()->result_array();
-        $this->db->from('galeri');
-        $galeri = $this->db->get()->result_array();
-        $this->db->from('team');
-        $team = $this->db->get()->result_array();
-		$this->db->from('testimonial');
-        $testimonial = $this->db->get()->result_array();
-        $this->db->from('caraousel');
-        $caraousel = $this->db->get()->result_array();
-        $this->db->from('konten a');
-        $konten = $this->db->get()->result_array();
-        
-        $data = array(
-            'judul'   => "Beranda | CharisaAlele",
-            'konfig'  => $konfig,
-            'kategori' => $kategori,
-            'galeri' => $galeri,
-			'testimonial' => $testimonial,
-            'caraousel' => $caraousel,            
-            'team' => $team,
-            'konten'    => $konten,
 
-        );
-        
-		$this->load->view('reservasi',$data);
-    }
+    $nama_kategori = $kategori_data->nama_kategori;
+
+    $data = array(
+        'judul'   => $nama_kategori . " | CharisaAlele",
+        'nama_kategori' => $nama_kategori,
+        'konfig'  => $konfig,
+        'kategori' => $kategori,
+        'konten'    => $konten,
+        'caraousel' => $caraousel,
+        'galeri' => $galeri,
+        'testimonial' => $testimonial,
+        'team' => $team,
+    );
+
+    $this->load->view('kategori', $data);
+}
+
     
 }
