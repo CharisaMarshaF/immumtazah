@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<title>Immumtazzah Akupuntur</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="" name="keywords">
-	<meta content="" name="description">
+	<meta content="akupuntur bekam spa karanganyar" name="keywords">
+	<meta content="melayani akupuntur bekam dan spa" name="description">
 
 	<link rel="icon" href="<?= base_url('assets/upload/immumtazah/pp.jpg') ?>" type="image/x-icon">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -55,10 +55,9 @@
 						style="letter-spacing: 3px; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); margin-bottom: 20px; ">
 						<?= $aa['judul'] ?></h1>
 					<p class="mb-5 fs-6"
-						style="text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); margin-bottom: 30px; font-family: 'Source Sans Pro', sans-serif;">
+						style="text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); margin-bottom: 30px; font-family: 'Poppins', sans-serif;">
 						<?= $aa['deskripsi'] ?></p>
-					<a class="btn btn-success rounded-pill text-white py-3 px-5"
-						href="<?= base_url('home/reservasi/') ?>">Reservasi</a>
+
 				</div>
 			</div>
 		</div>
@@ -103,10 +102,6 @@
 					</div>
 				</div>
 				<?php } ?>
-				<div class="col-12 text-center wow fadeInUp mt-5" data-wow-delay="0.2s">
-					<a class="btn btn-success rounded-pill text-white py-3 px-5"
-						href="<?= base_url('home/pelayanan/') ?>">Layanan Unggulan</a>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -120,10 +115,9 @@
 				<div class="sub-style">
 					<h4 class="sub-title px-3 mb-0">Keunggulan Kami</h4>
 				</div>
-				<h1 class="display-3 mb-4">Fasilitas Lengkap, Layanan Terpercaya</h1>
-				<p class="mb-0">"Kami menyediakan fasilitas lengkap dan pelayanan berkualitas, didukung oleh tenaga ahli
-					berpengalaman. Komitmen kami adalah menjadi mitra kesehatan terpercaya, memberikan solusi kesehatan
-					untuk Anda."</p>
+				<h1 class="display-3 mb-4">Fasilitas Lengkap <br> Layanan Terpercaya</h1>
+				<p class="mb-0">"Kami menyediakan fasilitas lengkap dan pelayanan berkualitas, didukung oleh tenaga ahli berpengalaman, untuk solusi kesehatan yang terpercaya."</p>
+
 
 			</div>
 			<div class="row g-4 justify-content-center">
@@ -131,16 +125,16 @@
 					<div class="row-cols-1 feature-item p-4 text-center shadow-lg">
 						<div class="col-12">
 							<div class="feature-icon mb-4">
-								<div class=" d-inline-flex bg-white rounded justify-content-center align-items-center"
+								<div class=" feature-img d-inline-flex bg-white rounded justify-content-center align-items-center"
 									style="width: 200px; height: 200px;">
 									<img src="<?= base_url('assets/upload/immumtazah/terapis.jpg') ?>"
-										alt="Feature Icon" class="img-fluid"
+										alt="Feature Icon" class="img-fluid rounded-top w-100"
 										style="object-fit: cover; width: 100%; height: 100%;">
 								</div>
 							</div>
 							<div class="feature-content d-flex flex-column">
-								<h5 class="mb-4">Tenaga Ahli</h5>
-								<p class="mb-0">Tenaga Kesehatan Minimal D3</p>
+								<h5 class="mb-4">Tenaga Kesehatan</h5>
+								<p class="mb-0">Minimal D3</p>
 							</div>
 						</div>
 					</div>
@@ -149,16 +143,16 @@
 					<div class="row-cols-1 feature-item p-4 text-center shadow-lg">
 						<div class="col-12">
 							<div class="feature-icon mb-4">
-								<div class=" d-inline-flex bg-white rounded justify-content-center align-items-center"
+								<div class=" feature-img d-inline-flex bg-white rounded justify-content-center align-items-center"
 									style="width: 200px; height: 200px;">
 									<img src="<?= base_url('assets/upload/immumtazah/fasilitas.jpg') ?>"
-										alt="Feature Icon" class="rounded img-fluid"
+										alt="Feature Icon" class="img-fluid rounded-top w-100"
 										style="object-fit: cover; width: 100%; height: 100%;">
 								</div>
 							</div>
 							<div class="feature-content d-flex flex-column">
 								<h5 class="mb-4">Fasilitas</h5>
-								<p class="mb-0">Fasilitas Kesehatan yang Lengkap</p>
+								<p class="mb-0">Fasilitas Lengkap</p>
 							</div>
 						</div>
 					</div>
@@ -167,15 +161,16 @@
 					<div class="row-cols-1 feature-item p-4 text-center shadow-lg">
 						<div class="col-12">
 							<div class="feature-icon mb-4">
-								<div class=" d-inline-flex bg-white rounded justify-content-center align-items-center"
+								<div class=" feature-img d-inline-flex bg-white rounded justify-content-center align-items-center"
 									style="width: 200px; height: 200px;">
 									<img src="<?= base_url('assets/upload/immumtazah/prima.jpg') ?>" alt="Feature Icon"
-										class="rounded img-fluid" style="object-fit: cover; width: 100%; height: 100%;">
+										class="img-fluid rounded-top w-100"
+										style="object-fit: cover; width: 100%; height: 100%;">
 								</div>
 							</div>
 							<div class="feature-content d-flex flex-column">
-								<h5 class="mb-4">Pelayanan Prima</h5>
-								<p class="mb-0">Berkomitmen Memberikan Pelayanan Terbaik</p>
+								<h5 class="mb-4">Pelayanan</h5>
+								<p class="mb-0">Memberikan yang Terbaik</p>
 							</div>
 						</div>
 					</div>
@@ -184,16 +179,16 @@
 					<div class="row-cols-1 feature-item p-4 text-center shadow-lg">
 						<div class="col-12">
 							<div class="feature-icon mb-4">
-								<div class=" d-inline-flex bg-white rounded justify-content-center align-items-center"
+								<div class=" feature-img d-inline-flex bg-white rounded justify-content-center align-items-center"
 									style="width: 200px; height: 200px;">
 									<img src="<?= base_url('assets/upload/immumtazah/sertifikasi.jpg') ?>"
-										alt="Feature Icon" class="rounded img-fluid"
+										alt="Feature Icon" class="img-fluid rounded-top w-100"
 										style="object-fit: cover; width: 100%; height: 100%;">
 								</div>
 							</div>
 							<div class="feature-content d-flex flex-column">
 								<h5 class="mb-4">Bersertifikasi</h5>
-								<p class="mb-0">Tampat kami Sudah Sertifikasi</p>
+								<p class="mb-0">Sudah Sertifikasi</p>
 							</div>
 						</div>
 					</div>
@@ -215,33 +210,30 @@
 						<h4 class="sub-title pe-3 mb-0">Solusi Kesehatan Anda</h4>
 						<h1 class="display-4 mb-4">Pelayanan Terbaik dan Terjamin</h1>
 						<div class="row g-4">
-							<div class="col-sm-6">
+							<div class="col-sm-11">
 								<div class="column">
 									<div class="mb-4">
-										<h5 class="mb-3"><i class="fa fa-check text-success me-2"></i> Akupunktur Terapi
-										</h5>
-										<p class="mb-0">Memperlancar aliran darah dan mempercepat penyembuhan 
-											tubuh.</p>
+										<h5 class="mb-3"><i class="fa fa-check text-success me-2"></i> Akupunktur</h5>
+										<p class="mb-0">Terapi dengan jarum untuk memperlancar aliran darah.</p>
 									</div>
 									<div class="mb-4">
-										<h5 class="mb-3"><i class="fa fa-check text-success me-2"></i> Relaksasi Tubuh
-										</h5>
-										<p class="mb-0">Mengurangi ketegangan otot dan stres, meningkatkan kualitas
-											tidur.</p>
+										<h5 class="mb-3"><i class="fa fa-check text-success me-2"></i> Spa</h5>
+										<p class="mb-0">Perawatan tubuh untuk relaksasi dan meningkatkan sirkulasi
+											darah.</p>
 									</div>
 									<div class="mb-4">
 										<h5 class="mb-3"><i class="fa fa-check text-success me-2"></i> Bekam</h5>
-										<p class="mb-0">Meningkatkan sirkulasi darah dan membantu detoksifikasi tubuh.
-										</p>
+										<p class="mb-0">Terapi penyedotan darah untuk menghilangkan racun, memperbaiki sirkulasi darah.</p>
 									</div>
 								</div>
+
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="col-lg-4" data-wow-delay="0.2">
-					<div class="video-container position-relative" >
+					<div class="video-container position-relative">
 
 						<button type="button" class="btn btn-play position-absolute top-50 start-50 translate-middle"
 							onclick="playVideo()">
@@ -279,12 +271,12 @@
 							<div class="row gy-3 gx-4">
 								<div class="col-xl-6">
 									<input type="text"
-										class="form-control py-3 border-success bg-transparent text-white name"
+										class="form-control py-3 border-success bg-transparent text-black name"
 										placeholder="Nama">
 								</div>
 								<div class="col-xl-6">
 									<input type="text"
-										class="form-control py-3 border-success bg-transparent text-white alamat"
+										class="form-control py-3 border-success bg-transparent text-black alamat"
 										placeholder="Alamat">
 								</div>
 
@@ -301,7 +293,7 @@
 								</div>
 
 								<div class="col-12">
-									<textarea class="form-control border-success bg-transparent text-white keluhan"
+									<textarea class="form-control border-success bg-transparent text-black keluhan"
 										name="text" id="area-text" cols="30" rows="5" placeholder="Keluhan"></textarea>
 								</div>
 
@@ -360,10 +352,9 @@
 	<!-- Testimonial End -->
 
 
-	<?php require_once('_footer.php')?>
 
 
-	
+
 
 	<!-- Copyright Start -->
 	<div class="container-fluid copyright py-4">

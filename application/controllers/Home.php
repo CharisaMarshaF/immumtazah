@@ -153,36 +153,42 @@ class Home extends CI_Controller {
         $konfig = $this->db->get()->row();
         $this->db->from('galeri');
         $galeri = $this->db->get()->result_array();
-		$this->db->from('testimonial');
+        $this->db->from('testimonial');
         $testimonial = $this->db->get()->result_array();
         $this->db->from('caraousel');
-        $caraousel = $this->db->get()->result_array(); 
+        $caraousel = $this->db->get()->result_array();
         $this->db->from('team');
-        $team = $this->db->get()->result_array();      
+        $team = $this->db->get()->result_array();
         $this->db->from('kategori');
         $kategori = $this->db->get()->result_array();
         $this->db->from('konten a');
-        $this->db->join('kategori b','a.id_kategori=b.id_kategori','left');
-        $this->db->join('user c','a.username=c.username','left');
+        $this->db->join('kategori b', 'a.id_kategori=b.id_kategori', 'left');
+        $this->db->join('user c', 'a.username=c.username', 'left');
         $this->db->where('a.id_kategori', $id);
         $konten = $this->db->get()->result_array();
         $this->db->from('kategori');
         $this->db->where('id_kategori', $id);
-        $nama_kategori = $this->db->get()->row()->nama_kategori;
+        $kategori_data = $this->db->get()->row();
+        if ($kategori_data) {
+            $nama_kategori = $kategori_data->nama_kategori;
+        } else {
+            $nama_kategori = 'Kategori Tidak Ditemukan'; 
+        }
         $data = array(
-            'judul'   => $nama_kategori."| CharisaAlele",
+            'judul'   => $nama_kategori . " | CharisaAlele",
             'nama_kategori' => $nama_kategori,
             'konfig'  => $konfig,
             'kategori' => $kategori,
             'konten'    => $konten,
             'caraousel' => $caraousel,
             'galeri' => $galeri,
-			'testimonial' => $testimonial,
+            'testimonial' => $testimonial,
             'team' => $team,
-
         );
-		$this->load->view('kategori',$data);
+    
+        $this->load->view('kategori', $data);
     }
+    
     public function contact(){
         $this->db->from('konfigurasi');
         $konfig = $this->db->get()->row();

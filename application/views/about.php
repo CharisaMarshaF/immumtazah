@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<title>Immumtazzah Akupuntur</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="" name="keywords">
-	<meta content="" name="description">
+	<meta content="akupuntur bekam spa karanganyar" name="keywords">
+	<meta content="melayani akupuntur bekam dan spa" name="description">
 	<link rel="icon" href="<?= base_url('assets/upload/immumtazah/pp.jpg') ?>" type="image/x-icon">
 
 	<!-- Google Web Fonts -->
@@ -66,7 +66,7 @@
 						<img src="<?= base_url('assets/upload/immumtazah/pijat.jpg') ?>" class="img-fluid rounded w-100"
 							style="object-fit: cover;" alt="Image">
 						<div class="about-img-inner">
-							<img src="<?= base_url('assets/upload/immumtazah/Akupun.jpg') ?>"
+							<img src="<?= base_url('assets/upload/immumtazah/pp.jpg') ?>"
 								class="img-fluid rounded-circle "
 								style="width: 250px; height: 2 50px; object-fit: cover;" alt="Image">
 						</div>
@@ -79,12 +79,17 @@
 						<h1 class="display-3 mb-4">IMMUMTAZAH TERAPHY CENTER</h1>
 						<p class="mb-4">Rumah Sehat IMMUMTAZAH melayani Akupunktur Kesehatan & Kecantikan, Akupresur (Pijat Titik Syaraf), Bekam, Totok Wajah, Facial, Body Spa, Perawatan Pranikah (lulur, facial, V-herbal treatment), Baby Spa, serta Jamu bersertifikasi (pemesanan).</p>
 						<div class="mb-4">
-							<p class="text-secondary"><i class="fa fa-check text-success me-2"></i> Sehat dan Segar, Bersama Kami
+							<p class="text-success-custom">
+								<i class="fa fa-check text-success-icon me-2"></i> Sehat dan Segar, Bersama Kami
 							</p>
-							<p class="text-secondary"><i class="fa fa-check text-success me-2"></i> Pelayanan Ramah, Profesional
+							<p class="text-success-custom">
+								<i class="fa fa-check text-success-icon me-2"></i> Pelayanan Ramah, Profesional
 							</p>
-							<p class="text-secondary"><i class="fa fa-check text-success me-2"></i> Sudah bersertifikasi</p>
+							<p class="text-success-custom">
+								<i class="fa fa-check text-success-icon me-2"></i> Sudah bersertifikasi
+							</p>
 						</div>
+
 					</div>
 				</div>
 			</div>
@@ -98,19 +103,19 @@
 				<div class="sub-style">
 					<h4 class="sub-title px-3 mb-0">Tim Terapis Kami</h4>
 				</div>
-				<h1 class="display-3 mb-4">Terapis Berpengalaman dan Profesional</h1>
+				<h1 class="display-3 mb-4">Terapis Berpengalaman <br>dan Profesional</h1>
 				<p class="mb-0">Kami bangga dengan tim Terapis kami yang luar biasa, masing-masing merupakan Terapis
 					berpengalaman dan handal dan telah menangani banyak pasien dengan berbagai keluhan !</p>
 			</div>
 			<div class="row g-4 justify-content-center">
 				<?php foreach ($team as $aa) { ?>
 				<div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-					<div class="team-item rounded">
+					<div class="shadow team-item rounded">
 						<div class="team-img rounded-top h-100">
 							<img src="<?= base_url('assets/upload/team/'.$aa['foto']) ?>"
 								class="img-fluid rounded-top w-100" alt="">
 						</div>
-						<div class="team-content text-center border border-success border-top-0 rounded-bottom p-4">
+						<div class="team-content text-center border shadow border-top-0 rounded-bottom p-4">
 							<h5><?= $aa['nama'] ?></h5>
 							<p class="mb-0"><?= $aa['info'] ?></p>
 						</div>
@@ -155,73 +160,13 @@
 	<!-- Blog End -->
 
 
-	<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-		<div class="container py-5">
-			<div class="row g-5">
-				<div class="col-md-6 col-lg-6 col-xl-3">
-					<div class="footer-item d-flex flex-column">
-						<h4 class="text-white mb-4"><i
-								class="fas fa-star-of-life me-3"></i><?= $konfig->judul_website; ?></h4>
-						<p><?= $konfig->profil_website; ?>
-						</p>
-						<div class="d-flex align-items-center">
-							<i class="fas fa-share fa-2x text-white me-2"></i>
-							<a class="btn-square btn btn-success text-white rounded-circle mx-1"
-								href="<?= $konfig->facebook; ?>"><i class="fab fa-facebook-f"></i></a>
-							<a class="btn-square btn btn-success text-white rounded-circle mx-1"
-								href="<?= $konfig->telepon; ?>"><i class="fab fa-whatsapp"></i></a>
-							<a class="btn-square btn btn-success text-white rounded-circle mx-1"
-								href="<?= $konfig->instagram; ?>"><i class="fab fa-instagram"></i></a>
-
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-6 col-xl-3">
-					<div class="footer-item d-flex flex-column">
-						<h4 class="mb-4 text-white">Quick Links</h4>
-						<a href="<?= base_url('home/about/') ?>"><i class="fas fa-angle-right me-2"></i> Tentang</a>
-						<a href="<?= base_url('home/contact/') ?>"><i class="fas fa-angle-right me-2"></i> Kontak</a>
-						<a href="<?= base_url('home/galeri/') ?>"><i class="fas fa-angle-right me-2"></i> Galeri</a>
-						<a href="<?= base_url('home/pelayanan/') ?>"><i
-								class="fas fa-angle-right me-2"></i>Pelayanan</a>
-						<a href="<?= base_url('home/reservasi/') ?>"><i class="fas fa-angle-right me-2"></i>
-							Reservasi</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-6 col-xl-3">
-					<div class="footer-item d-flex flex-column">
-						<h4 class="mb-4 text-white">Pelayanan</h4>
-						<a href="<?= base_url('home/pelayanan/') ?>"><i class="fas fa-angle-right me-2"></i> Semua
-							Pelayanan</a>
-
-						<?php foreach ($kategori as $kate) { ?>
-						<a href="<?= base_url('home/kategori/' . $kate['id_kategori']) ?>"><i
-								class="fas fa-angle-right me-2"></i><?= $kate['nama_kategori'] ?></a>
-
-						<?php } ?>
-
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-6 col-xl-3">
-					<div class="footer-item d-flex flex-column">
-						<h4 class="mb-4 text-white">Info Kontak</h4>
-						<a href="<?= $konfig->alamat; ?>"><i class="fa fa-map-marker-alt me-2"></i>
-							Mendungan, Jungke, Karanganyar</a>
-						<a href="<?= $konfig->instagram; ?>" class="mb-3"><i
-								class="fab fa-instagram me-2"></i>Immumtazah</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Footer End -->
-
 	<!-- Copyright Start -->
 	<div class="container-fluid copyright py-4">
 		<div class="container">
 			<div class="row g-4 align-items-center">
 				<div class="col-md-6 text-center text-md-start mb-md-0">
-					<span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Immumtazah</a>,
+					<span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i></a>Immumtazah
+						Teraphy Center
 						All right reserved.</span>
 				</div>
 

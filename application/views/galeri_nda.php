@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<title>Immumtazzah Akupuntur</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="" name="keywords">
-	<meta content="" name="description">
+	<meta content="akupuntur bekam spa karanganyar" name="keywords">
+	<meta content="melayani akupuntur bekam dan spa" name="description">
 	<link rel="icon" href="<?= base_url('assets/upload/immumtazah/pp.jpg') ?>" type="image/x-icon">
 
 	<!-- Google Web Fonts -->
@@ -65,10 +65,8 @@
 				<div class="sub-style">
 					<h4 class="sub-title px-3 mb-0">Galeri Kami</h4>
 				</div>
-				<h1 class="display-3 mb-4">Dokumentasi Layanan dan Sarana</h1>
-				<p class="mb-0">Menyediakan fasilitas unggulan yang nyaman serta terapi berkualitas tinggi, galeri ini
-					menampilkan berbagai dokumentasi layanan dan sarana yang tersedia. Kami berkomitmen untuk memberikan
-					yang terbaik bagi setiap individu yang mempercayakan perawatan mereka kepada kami.</p>
+				<h1 class="display-3 mb-4"></h1>
+				<p class="mb-0">Galeri pelayanan kami dengan pasien dan fasilitas yang ada di immumtazah </p>
 			</div>
 			<div class="row g-4 justify-content-center">
 				<?php foreach ($galeri as $gg) { ?>
@@ -89,7 +87,6 @@
 	<!-- Blog End -->
 
 
-	<?php require_once('_footer.php')?>
 
 
 	<!-- Copyright Start -->
@@ -97,7 +94,8 @@
 		<div class="container">
 			<div class="row g-4 align-items-center">
 				<div class="col-md-6 text-center text-md-start mb-md-0">
-					<span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Immumtazah</a>,
+					<span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i></a>Immumtazah
+						Teraphy Center
 						All right reserved.</span>
 				</div>
 

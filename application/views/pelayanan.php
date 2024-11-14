@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<title>Immumtazzah Akupuntur</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="" name="keywords">
-	<meta content="" name="description">
+	<meta content="akupuntur bekam spa karanganyar" name="keywords">
+	<meta content="melayani akupuntur bekam dan spa" name="description">
 	<link rel="icon" href="<?= base_url('assets/upload/immumtazah/pp.jpg') ?>" type="image/x-icon">
 
 	<!-- Google Web Fonts -->
@@ -63,10 +63,8 @@
 				<div class="sub-style">
 					<h4 class="sub-title px-3 mb-0">Pelayanan kami</h4>
 				</div>
-				<h1 class="display-3 mb-4">Pelayanan Terapi oleh Terapis Profesional</h1>
-				<p class="mb-0">Kami menawarkan berbagai layanan terapi seperti akupuntur, bekam, dan spa. Terapis
-					profesional kami menggunakan teknik yang aman dan efektif untuk membantu Anda mengatasi berbagai
-					masalah kesehatan, mengurangi stres.</p>
+				<h1 class="display-3 mb-4">Layanan Terapi Kami</h1>
+				<p class="mb-0">Yuk !! Coba rasakan pelayanan terapi di Immumtazah Teraphy Center, seperti Akupuntur, Bekam dan Spa.</p>
 			</div>
 			<div class="row g-4 justify-content-center">
 				<?php foreach ($konten as $uu) { ?>
@@ -78,10 +76,15 @@
 						</div>
 						<div class="service-content rounded-bottom bg-light p-4">
 							<div class="service-content-inner">
+								<div class="d-flex text-center mb-3">
+									<div class="d-flex text-center mb-1">
+										<p class="mb-0 text-list"><i class="fa fa-heartbeat text-success"></i>
+											<?= $uu['nama_kategori'] ?></p>
+									</div>
+								</div>
 								<h5 class="mb-4"><?= $uu['judul'] ?></h5>
                                 <p class="mb-4"><?= nl2br($uu['keterangan']) ?></p>
-								<h1
-									class="btn btn-success rounded-pill text-white py-2 px-4 mb-2"><?= $uu['nama_kategori'] ?></h1>
+								
 							</div>
 						</div>
 					</div>
@@ -94,7 +97,6 @@
 
 	<!-- Blog End -->
 
-	<?php require_once('_footer.php')?>
 
 	<!-- Footer End -->
 
@@ -103,7 +105,8 @@
 		<div class="container">
 			<div class="row g-4 align-items-center">
 				<div class="col-md-6 text-center text-md-start mb-md-0">
-					<span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Immumtazah</a>,
+					<span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i></a>Immumtazah
+						Teraphy Center
 						All right reserved.</span>
 				</div>
 

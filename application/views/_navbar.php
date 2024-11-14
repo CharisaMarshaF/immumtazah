@@ -34,10 +34,11 @@
 <div class="container-fluid position-relative p-0">
 	<nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
 		<a href="<?= base_url() ?>" class="navbar-brand p-0 d-flex align-items-center">
-			<img src="<?= base_url('assets/upload/immumtazah/pp.jpg') ?>" alt="Logo" class="me-2" style="width: 40px; height: 40px;">
+			<img src="<?= base_url('assets/upload/immumtazah/pp.jpg') ?>" alt="Logo" class="me-2"
+				style="width: 40px; height: 40px;">
 			<div>
 				<h2 class="text-success m-0"><?= $konfig->judul_website; ?></h2>
-				<p class="m-0 text-secondary" style="font-size: 14px;">Akupuntur Bekam & Spa Karanganyar</p>
+				<p class="m-0 " style="font-size: 14px; color: #41DC94;">AkupunturBekamSpaKaranganyar</p>
 			</div>
 		</a>
 
@@ -50,15 +51,20 @@
 				<a href="<?= base_url() ?>" class="nav-item nav-link">Home</a>
 				<a href="<?= base_url('home/about/') ?>" class="nav-item nav-link">Tentang</a>
 				<a href="<?= base_url('home/galeri/') ?>" class="nav-item nav-link">Galeri</a>
-				
+
 				<a href="<?= base_url('home/pelayanan/') ?>" class="nav-item nav-link">Layanan</a>
-				
-				<?php foreach ($kategori as $kate) { ?>
-				<a href="<?= base_url('home/kategori/' . $kate['id_kategori']) ?>" class="nav-item nav-link">
-					<?= $kate['nama_kategori'] ?>
-				</a>
+
+				<?php if (!empty($kategori)) { ?>
+					<?php foreach ($kategori as $kate) { ?>
+						<a href="<?= base_url('home/kategori/' . $kate['id_kategori']) ?>" class="nav-item nav-link">
+							<?= $kate['nama_kategori'] ?>
+						</a>
+					<?php } ?>
+					<?php } else { ?>
+					<p>Belum ada kategori yang tersedia.</p> <!-- Tampilkan pesan jika tidak ada kategori -->
 				<?php } ?>
-				
+
+
 			</div>
 		</div>
 
