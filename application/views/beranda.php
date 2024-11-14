@@ -6,9 +6,13 @@
 	<title>Immumtazzah Akupuntur</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta content="akupuntur bekam spa karanganyar" name="keywords">
-	<meta content="melayani akupuntur bekam dan spa" name="description">
-
+	<meta content="melayani akupuntur bekam dan spa karanganyar" name="description">
 	<link rel="icon" href="<?= base_url('assets/upload/immumtazah/pp.jpg') ?>" type="image/x-icon">
+	<meta property="og:title" content="Akupuntur Bekam Spa Karanganyar"/>
+    <meta property="og:description" content="Disini Melayani terapi akupuntur bekam spa"/>
+    <meta property="og:url" content="https://akupunturbekamspakra.id"/>
+    <meta property="og:image" content="https://laminarehab.com/wp-content/uploads/2021/08/akupuntur.jpg"/>
+    <meta property="og:type" content="website"/>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 

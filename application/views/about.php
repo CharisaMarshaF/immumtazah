@@ -6,9 +6,10 @@
 	<title>Immumtazzah Akupuntur</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta content="akupuntur bekam spa karanganyar" name="keywords">
-	<meta content="melayani akupuntur bekam dan spa" name="description">
+	<meta content="melayani akupuntur bekam dan spa karanganyar" name="description">
 	<link rel="icon" href="<?= base_url('assets/upload/immumtazah/pp.jpg') ?>" type="image/x-icon">
-
+	
+    
 	<!-- Google Web Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
