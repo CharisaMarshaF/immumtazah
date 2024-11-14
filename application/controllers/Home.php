@@ -32,7 +32,7 @@ class Home extends CI_Controller {
             $konten = $this->db->get()->result_array();
         }
         $data = array(
-            'judul'   => "Beranda | CharisaAlele",
+            'judul'   => "Beranda | Immumtazah",
             'konfig'  => $konfig,
             'kategori' => $kategori,
             'galeri' => $galeri,
@@ -65,7 +65,7 @@ class Home extends CI_Controller {
         $konten = $this->db->get()->result_array();
         
         $data = array(
-            'judul'   => "Beranda | CharisaAlele",
+            'judul'   => "Beranda | Immumtazah",
             'konfig'  => $konfig,
             'kategori' => $kategori,
             'galeri' => $galeri,
@@ -95,7 +95,7 @@ class Home extends CI_Controller {
         $this->db->from('galeri');
         $galeri = $this->db->get()->result_array(); 
         $data = array(
-            'judul'        => "Galeri Foto | CharisaAlele",
+            'judul'        => "Galeri Foto | Immumtazah",
             'konfig'       => $konfig,
             'kategori'     => $kategori,
             'konten'       => $konten,
@@ -133,7 +133,7 @@ class Home extends CI_Controller {
             $konten = $this->db->get()->result_array();
         }
         $data = array(
-            'judul'   => "Beranda | CharisaAlele",
+            'judul'   => "Beranda | Immumtazah",
             'konfig'  => $konfig,
             'kategori' => $kategori,
             'galeri' => $galeri,
@@ -181,7 +181,7 @@ class Home extends CI_Controller {
     $nama_kategori = $kategori_data->nama_kategori;
 
     $data = array(
-        'judul'   => $nama_kategori . " | CharisaAlele",
+        'judul'   => $nama_kategori . " | Immumtazah",
         'nama_kategori' => $nama_kategori,
         'konfig'  => $konfig,
         'kategori' => $kategori,
@@ -195,5 +195,4 @@ class Home extends CI_Controller {
     $this->load->view('kategori', $data);
 }
 
-    
-}
+    }
