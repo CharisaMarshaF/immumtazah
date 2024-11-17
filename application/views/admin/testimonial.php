@@ -63,11 +63,11 @@
 
 					<td>
 						<button type="button" class="btn btn-danger waves-effect mt-3" data-toggle="modal"
-							data-target="#deleteModal">
+							data-target="#deleteModal<?= $gg['id_testimonial'] ?>">
 							Hapus
 						</button>
 
-						<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog"
+						<div class="modal fade" id="deleteModal<?= $gg['id_testimonial'] ?>" tabindex="-1" role="dialog"
 							aria-labelledby="deleteModalLabel" aria-hidden="true">
 							<div class="modal-dialog modal-sm" role="document">
 								<div class="modal-content">
@@ -78,7 +78,7 @@
 										</button>
 									</div>
 									<div class="modal-body">
-										<p>Apakah Anda yakin ingin menghapus Galeri berjudul
+										<p>Apakah Anda yakin ingin menghapus Testi berjudul
 											"<strong><?= $gg['judul'] ?></strong>"?</p>
 									</div>
 									<div class="modal-footer">

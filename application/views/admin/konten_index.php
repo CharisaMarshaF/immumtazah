@@ -99,7 +99,7 @@
 											aria-label="Close">&times;</button>
 									</div>
 									<div class="modal-body">
-										<p>Apakah Anda yakin ingin menghapus Konten ini?</p>
+										<p>Apakah Anda yakin ingin menghapus Konten <strong><?= $aa['judul'] ?></strong>?</p>
 									</div>
 									<div class="modal-footer">
 										<button type="button" class="btn btn-secondary"
